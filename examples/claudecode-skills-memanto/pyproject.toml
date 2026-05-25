@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "memanto-skills"
+version = "0.1.0"
+description = "Cross-session persistent memory for mattpocock/skills via Memanto"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "memanto>=0.1.0",
+    "click>=8.0",
+]
+keywords = ["memanto", "moorcheh", "skills", "claude", "memory"]
+
+[project.scripts]
+memanto-skills = "memanto_skills.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["memanto_skills*"]
